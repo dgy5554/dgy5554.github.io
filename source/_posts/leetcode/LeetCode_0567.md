@@ -1,6 +1,7 @@
 ---
 title: LeetCode_567.字符串的排列
 categories: LeetCode
+date: 2021-03-31
 tags: Java
 ---
 
