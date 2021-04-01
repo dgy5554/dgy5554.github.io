@@ -31,7 +31,7 @@ num1 和 num2 均不以零开头，除非是数字 0 本身。
 
 ## 关键点
 字符串相乘，需要按照两个字符串相加的思路来拆分问题；
-![alt 字符串相乘](https://assets.leetcode-cn.com/solution-static/43/sol1.png)
+![alt 字符串相乘](/images/LeetCode/multipy.png)
 
 
 ## 源码
