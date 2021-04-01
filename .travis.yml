@@ -22,8 +22,8 @@ script:
 deploy: # 根据个人情况，这里会有所不同
   provider: pages
   skip_cleanup: true # 构建完成后不清除
-  token: $GH_TOKEN # 你刚刚设置的 token
+  github_token: $GH_TOKEN # 你刚刚设置的 token
   keep_history: true # 保存历史
   on:
-    branch: main # hexo 站点源文件所在的 branch
+    branch: gh-pages # hexo 站点源文件所在的 branch
   local_dir: public 
