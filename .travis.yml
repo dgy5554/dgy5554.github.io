@@ -15,4 +15,5 @@ deploy:
   keep_history: true
   on:
     branch: main
+  target_branch: gh-pages
   local_dir: public 
