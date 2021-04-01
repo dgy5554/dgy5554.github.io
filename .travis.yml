@@ -1,29 +1,18 @@
-os: linux
+sudo: false
 language: node_js 
 node_js:
-  - 10  # 使用 nodejs LTS v10
+  - 10  # use nodejs v10 LTS
+cache: npm
 branches:
   only:
-    - main # 只监控 source 的 branch
-cache:
-  directories:
-    - node_modules # 缓存 node_modules 加快构建速度
-before_script: ## 根据你所用的主题和自定义的不同，这里会有所不同
-  - npm install -g hexo-cli # 在 CI 环境内安装 Hexo
-  # - cd themes 
-  # - git clone https://github.com/next-theme/hexo-theme-next.git next #从 Github 上拉取 next 主题
-  # - cd next
-  # - npm install --production # 安装 next 主题的依赖
-  # - cd ../.. # 返回站点根目录
-  # - cp _config.theme.yml themes/next/_config.yml # 将主题的配置文件放回原处    
-  # - npm install # 在根目录安装站点需要的依赖 
+    - main # build main branch only
 script: 
   - hexo generate # generate static files
-deploy: # 根据个人情况，这里会有所不同
+deploy: 
   provider: pages
-  skip_cleanup: true # 构建完成后不清除
-  github_token: $GH_TOKEN # 你刚刚设置的 token
-  keep_history: true # 保存历史
+  skip_cleanup: true
+  github_token: $GH_TOKEN
+  keep_history: true
   on:
-    branch: gh-pages # hexo 站点源文件所在的 branch
+    branch: main
   local_dir: public 
