@@ -1,5 +1,5 @@
 ---
-title: LeetCode_567.字符串的排列
+title: LeetCode_151.翻转字符串里的单词
 categories: LeetCode
 date: 2021-04-06
 tags: Java
